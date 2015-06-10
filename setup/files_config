@@ -1,0 +1,7 @@
+# This file contains a list of files and their RPM directives
+# http://www.rpm.org/max-rpm/s1-rpm-inside-files-list.html
+%config(noreplace) /usr/local/sdg/main/settings.py
+#%ghost /usr/local/sdg/main/settings.pyc
+#%ghost /usr/local/sdg/main/settings.pyo
+
+%config /usr/local/sdg/templates/admin/base_site.html
