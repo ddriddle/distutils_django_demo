@@ -11,14 +11,13 @@ import os
 import sys
 
 from sdg.scl import SDGCollections
+from django.core.wsgi import get_wsgi_application
 
 SDGCollections.enable('python27', 'sdg_2015a_python27')
 
 this_dir = os.path.dirname(__file__)
 BASE_DIR = os.path.abspath(os.path.join(this_dir, '..'))
 sys.path.insert(0, BASE_DIR)
-
-from django.core.wsgi import get_wsgi_application
 
 os.environ.setdefault("DJANGO_SETTINGS_MODULE", "main.settings")
 
