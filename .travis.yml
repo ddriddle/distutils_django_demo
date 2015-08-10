@@ -1,13 +1,21 @@
 language: python
 sudo: required
 python:
-  - "2.7"
+- '2.7'
 install:
-  - pip install pep8 coveralls pyflakes Django
+- pip install pep8 coveralls pyflakes Django
 script:
-  - python setup.py test
-  - make coverage
-  - pep8 --exclude=migrations src
-  - pyflakes src
+- python setup.py test
+- make coverage
+- pep8 --exclude=migrations src
+- pyflakes src
 after_success:
-  - coveralls
+- coveralls
+deploy:
+  provider: heroku
+  api_key:
+    secure: V54Fn1+GREb9zYbc0siEUvi5wwY6uiVU5ed2Wt6N8PlQafjh4ijhnWDGWj3+tKblZLXP8x6H+C4Fag+ebVXEMsbTk5X8FlikXFFggNWVXLYtzECv3wQvI+NJwSSZ40OuC7c3+5OtLQlHQElFEI5iLIzjRG4k0aTCw4FUoVP8IWx7zIBtK6eedR/qoKqyT+TfIpwo7jv6ei/oaPBryZjMrf/VwnOKpYAPDPtSAFfStmdOYa0HgfHNLI/XK9INvFm5ncZhBg3GwzwwU9vP/0BSYwXx3Gmj7KAlB0Ji40WjHoLCl45pMG7vvEBijeq0mebopJsaI6r/sLopzW9rnmyoSNyFOI6abShZtIO9Qp4Tf5Pwb4fgJ7gsri7fdgGVt/d/+8BLpl8UvbR0daC46nNfbyZUbWaqD0oICYCsJfVSoZa04MKN2JPJ/Wg9dUJXs6lmkfgI/BVllN7MWK/L4cVbIrPFJUxlK1APOgczgND3RzQIB1pEjpA+E/uBHGn8OPpHNB8YigEaiX1D/UXRpVFsdom1cRT3gCWg9gYeLMEFIvG4c9T1GCu4kMljA19uGbryb3SNpnLZivsTLjLc2OjZ+GUcK5p7O9iAkY6IHKciUAoUxmh4eP+zHFAwx6Pr6iQcDUhWUh2eqXivnfeK+KnUCMY05rz8tfqwelLr0Kp26fk=
+  app: distutils_django_demo
+  on:
+    repo: ddriddle/distutils_django_demo
+    branch: travis
