@@ -1,5 +1,6 @@
 # Setuptools, Travis CI, and Coveralls demo
 
+
 [![Build
 Status](https://travis-ci.org/ddriddle/distutils_django_demo.svg?branch=travis)](https://travis-ci.org/ddriddle/distutils_django_demo)
 [![Coverage
