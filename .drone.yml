@@ -1,9 +1,9 @@
 build:
     image: python:2.7
     commands:
-        - apt-get install python-coverage
         - pip install pep8 pyflakes Django
         - python setup.py test
         - pep8 --exclude=migrations src
         - pyflakes src
-        - make coverage
+#        - apt-get install python-coverage
+#        - make coverage
