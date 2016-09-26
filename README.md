@@ -1,6 +1,7 @@
 # Setuptools, Travis CI, and Coveralls demo
 
-[![Build Status](http://drone.us-west-2.elasticbeanstalk.com/api/badges/ddriddle/distutils_django_demo/status.svg)](http://drone.us-west-2.elasticbeanstalk.com/ddriddle/distutils_django_demo)
+[![Build
+Status](http://drone.us-west-2.elasticbeanstalk.com/api/badges/ddriddle/distutils_django_demo/status.svg?branch=drone)](http://drone.us-west-2.elasticbeanstalk.com/ddriddle/distutils_django_demo?branch=drone)
 
 ## Travis CI documentation
 
